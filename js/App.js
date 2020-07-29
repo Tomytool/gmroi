@@ -31,5 +31,5 @@ function calculo() {
         document.getElementById("valor_buscado").innerHTML = "El Inventario es:  ";
     }
 
-    document.getElementById("resultado").innerHTML = roundto(resultado1, 2);
+    document.getElementById("resultado").innerHTML = resultado1;
 }
