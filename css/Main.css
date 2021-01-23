@@ -56,11 +56,23 @@
 .container__formulario--descripcion--titulo {
   text-align: center;
 }
+.container__formulario--descripcion--titulo h2{
+    padding: 15px;
+}
 .container__formulario--descripcion--parrafo {
   margin-top: 10px;
 }
 
-.container__formulario--descripcion--imagen img {
-  width: 100%;
-  margin-top: 15px;
+.container__formulario--descripcion--imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.container__formulario--descripcion--imagen img {
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 400px){.container__formulario--descripcion--imagen img{
+width: 100%;
+}}
