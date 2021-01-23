@@ -5,112 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--link con boostrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!-- link de jquery-->
     <script src="js/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <!--termino del link de boostrap -->
     <script src="js/App.js"></script>
 
+    <!-- link de CSS -->
+    <link rel="stylesheet" href="css/Main.css">
     <!-- nuetro css-->
-    <style type="text/css">
-        .borde1 {
-            background-color: rgb(196, 212, 242);
-        }
-        
-        .borde2 {
-            background-color: rgb(3, 88, 140);
-            height: 50px;
-            margin-top: 10px;
-        }
-        
-        .borde3 {
-            background-color: rgb(45, 68, 89);
-            height: 50px;
-            margin-top: 10px;
-        }
-        
-        .borde4 {
-            background-color: violet;
-            height: 50px;
-            margin-top: 10px;
-        }
-    </style>
-
 </head>
 
-<body class="borde1">
-    <div class="container-fluid">
+<body class="container">
+    <div class="container__formulario">
         <!-- areas de formulario GmRoi-->
-        <div class="row border ">
-            <div class="col-12  text-center borde3">
-                <h1 style="color: white;">Calulos de Camina</h1>
+            <div class="container__formulario--titulo1">
+                <p>Calulos de Camina</p>
+            </div>         
+            <div class="container__formulario--titulo2">
+                        <p>Calculo del GmRoi</p>
             </div>
-        </div>
-        <div class="row border">
-            <div class="col-12 col-sm-6 col-lg-6">
-                <div class="row border">
-                    <div class="col-12 text-center borde2">
-                        <h2 style="color: white;">Calculo del GmRoi</h2>
-                    </div>
-                    <div class="col-12">
+            <div class="container__formulario--ingreso">
                         <form id="formulario">
-                            <div class="form-group">
                                 <label for="Venta"><h6>Venta 4 semana</h6> </label>
-                                <input class="form-control" type="number" name="Venta" id="venta" placeholder="0">
+                                <input type="number" name="Venta" id="venta" placeholder="0">
                                 <label for="Margen"><h6>Margen</h6></label>
-                                <input class="form-control" type="number" name="Margen" id="margen" placeholder="0">
+                                <input type="number" name="Margen" id="margen" placeholder="0">
                                 <label for="Inventario"><h6>Inventario</h6></label>
-                                <input class="form-control" type="number" name="Inventario" id="inventario" placeholder="0">
+                                <input type="number" name="Inventario" id="inventario" placeholder="0">
                                 <label for="gmrio"><h6>GmRoi</h6></label>
-                                <input class="form-control" type="number" name="gmroi" id="GmRoi" placeholder="0">
-                                <input type="button" value="Calcular" onclick="calculo()" class="btn btn-primary" style="margin-top: 10px;">
-                                <input type="button" value="Limpiar" onclick="limpiar()" class="btn btn-primary" style="margin-top: 10px;">
-                            </div>
+                                <input type="number" name="gmroi" id="GmRoi" placeholder="0">
+                                <input class="botones" type="button" value="Calcular" onclick="calculo()">
+                                <input class="botones" type="button" value="Limpiar" onclick="limpiar()">
+                            
                         </form>
-                    </div>
-                    <div class="col-6">
-                        <h6 id="valor_buscado"></h6>
-                    </div>
-                    <div class="col-6">
-                        <h6 id="resultado"></h6>
-                    </div>
-                </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-6">
-                <div class="row border">
-                    <div class="col-12 text-center borde2">
-                        <h2 style="color: white;">¿Que es GmRoi?</h4>
-                    </div>
-                    <div class="col-12">
+            <div class="container__formulario--valor">
+                        <p id="valor_buscado"></p>
+            </div>
+            <div class="container__formulario--valor">
+                        <p id="resultado"></p>
+            </div>     
+            <div class="container__formulario--descripcion">
+            <div class="container__formulario--descripcion--titulo">
+                        <h2>¿Que es GmRoi?</h4>
+</div>
+                    <div class="container__formulario--descripcion--parrafo">
                         <p>El GMROI (Gross Margin Return on Investment) es un indicador muy frecuentemente usado en el retail para medir la rentabilidad generada por el espacio de góndola, se busca que el inventario exhibido en esos espacios sea capaz de
                             entrar y salir varias veces en un mismo mes, cuando esto se logra, las posiciones de inventario necesarias para vender son menores que la unidad alcanzada de venta. La utilización de esta herramienta te permite medir y administrar
                             la productividad de las inversiones en inventario, expresa el margen bruto del retorno de la inversión en inventario, que muestra la relación entre el total de las ventas, el margen bruto de dichas ventas y el valor monetario
                             que está invertido en el inventario. La ecuación del GMROI es la siguiente:</p>
                     </div>
-                    <div class="col-12">
+                    <div class="container__formulario--descripcion--imagen">
                         <img src="img/GMROI.jpg" alt="">
                     </div>
 
-                </div>
+                
             </div>
-        </div>
-
     </div>
-    <!-- area de formulario de la tabla agrupaciones-->
-    <!-- 
-    <div class="container-fluid borde1">
-        <div class="row ">
-            <div class="col-12 col-sm-12  col-lg-4 borde2">titulo tabla</div>
-            <div class="col-12 col-sm-6 col-lg-4 borde3">formulario de tabla</div>
-            <div class="col-12 col-sm-6 col-lg-4 borde4">tabla</div>
-        </div>
-    </div>
--->
-
-
 </body>
-
 </html>
