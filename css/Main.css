@@ -15,7 +15,7 @@
 }
 
 .container__formulario {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,11 +48,11 @@
   margin: 0 auto;
 }
 .container__formulario--ingreso .botones {
-  width: 40%;
+  width: 50%;
   margin: 10px auto;
   border-radius: 25px 25px;
-  padding: 7px;
-  font-size: 18px;
+  padding: 6px;
+  font-size: 20px;
 }
 
 .container__formulario--valor {
