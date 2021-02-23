@@ -50,6 +50,9 @@
 .container__formulario--ingreso .botones {
   width: 40%;
   margin: 10px auto;
+  border-radius: 25px 25px;
+  padding: 7px;
+  font-size: 18px;
 }
 
 .container__formulario--valor {
